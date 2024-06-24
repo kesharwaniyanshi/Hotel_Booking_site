@@ -9,7 +9,7 @@ export const Navbar = () => {
             <header>
                 <div className="container">
                     <div className="logo-brand">
-                        <a href="/">BookHotel</a>
+                        <a style={{fontSize:"2.5rem"}} href="/">GetAWay</a>
                     </div>
                     <nav>
                         <ul>

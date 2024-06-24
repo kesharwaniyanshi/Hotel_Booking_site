@@ -575,6 +575,7 @@ a:active {
 
 }
 
+
 th {
     font-size: 1.9rem;
     letter-spacing: 0.1rem;
@@ -597,19 +598,37 @@ td {
 }
 
 table {
-    background: whitesmoke;
+    background:rgb(255, 254, 254);
     box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
     border-radius: 1rem;
     border-collapse: collapse;
 
 }
+.edit{
+   background-color: rgb(2, 174, 2);
+   width: 8rem;
+}
+
 
 body tr {
     display: grid;
     grid-template-columns: repeat(5, minmax(10rem, 1fr));
     align-items: center;
     box-shadow: 0 0.3rem 0 grey;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    border-bottom: 4px solid transparent;
+    color: var(--bg-color);
+
+    &:last-child {
+        box-shadow: none;
+    }
+}
+.feedback{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(10rem, 1fr));
+    align-items: center;
+    box-shadow: 0 0.3rem 0 grey;
+    /* margin-bottom: 10px; */
     border-bottom: 4px solid transparent;
     color: var(--bg-color);
 

@@ -65,7 +65,7 @@ export const AdminContacts = () => {
                 <div className="container admin-feedback">
                     <table>
                         <thead>
-                            <tr>
+                            <tr className="feedback">
                                 <th>Username</th>
                                 <th>Email</th>
                                 <th>Feedback</th>
@@ -75,7 +75,7 @@ export const AdminContacts = () => {
                         </thead>
                         <tbody>
                             {messages.map((curUser, index) => {
-                                return <tr key={index}>
+                                return <tr key={index} className="feedback">
                                     <td>
                                         {curUser.username}
                                     </td>
