@@ -17,22 +17,23 @@ export const Hotels = () => {
                     </h1>
 
                 </div>
-                <div className="container grid grid-four-cols">
+                <div className="container grid grid-three-cols">
                     {hotels.map((curEle, index) => {
                         const { name, image, place, price, averageRating, datesAvailable } = curEle;
                         return (
                             <div className="card" key={index}>
                                 <div className="card-img">
                                     <img src={image} width={300} height={200} alt={name} />
+                                    <div className="card-heart">&#9829;</div>
                                 </div>
                                 <div className="card-details">
                                     <div className="grid grid-two-cols">
-                                        <p>{name}</p>
-                                        <p><FaStar />{averageRating}</p>
+                                        <p className="name">{name}</p>
+                                        <p><FaStar /> {averageRating}</p>
                                     </div>
-                                    <p>{place}</p>
-                                    <p>{price}</p>
-                                    <p>{datesAvailable}</p>
+                                    <p className="place">{place}</p>
+                                    <p className="date">{datesAvailable}</p>
+                                    <p className="price">{price}</p>
                                 </div>
                             </div>);
                     })}

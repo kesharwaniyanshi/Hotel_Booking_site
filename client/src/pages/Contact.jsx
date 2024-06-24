@@ -3,9 +3,20 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 import { useAuth } from "../store/auth";
 import { toast } from "react-toastify";
+import Lottie from 'react-lottie';
+import animationData from "../lotties/customer-review.json";
 
 export const Contact = () => {
 
+
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: "xMidYMid slice"
+        }
+    };
     const [contact, setContact] = useState({
         username: "",
         email: "",
@@ -28,7 +39,7 @@ export const Contact = () => {
         let value = e.target.value;
         setContact({ ...contact, [name]: value });
     }
-    const handleSubmit = async(e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         // console.log(user);
         try {
@@ -41,7 +52,7 @@ export const Contact = () => {
             });
             const data = await response.json();
             if (response.ok) {
-                toast.success("Sent Feedback"); 
+                toast.success("Sent Feedback");
                 console.log(data);
                 setContact({
                     username: user.username,
@@ -50,7 +61,7 @@ export const Contact = () => {
                 });
             }
             else {
-                toast.error(`Couldn't send Feedback ,${data.message}`); 
+                toast.error(`Couldn't send Feedback ,${data.message}`);
                 console.log(data.message || "Sending review failed");
             }
         }
@@ -69,7 +80,12 @@ export const Contact = () => {
                     </div>
                     <div className="container grid grid-two-cols">
                         <div className="feedback-image">
-                            <img src="/images/feedback.png" alt="People giving feedback" ></img>
+                            {/* <img src="/images/feedback.png" alt="People giving feedback" ></img> */}
+                            <Lottie
+                                options={defaultOptions}
+                                height={500}
+                                width={500}
+                            />
                         </div>
 
                         <section className="section-form">

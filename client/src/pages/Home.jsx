@@ -102,7 +102,7 @@ export const Home = () => {
             </section>
             {/* Section 3 */}
             <section className="section-offer">
-                <div className="offer-content">
+                <div className="container offer-content">
                     <div className="main-heading">
                         <h1 style={{ fontSize: "30px" }}>Offers</h1>
                         <p>Promotions, deals and special offers for you</p>

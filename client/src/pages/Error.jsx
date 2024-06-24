@@ -3,7 +3,7 @@ export const Error = () => {
     return (
         <>
             <section className="error-content">
-                <div className="content">
+                <div className=" container content">
                     <div className="top">
                         <h1 className="header">404</h1>
                         <h2>Page Not Found</h2>

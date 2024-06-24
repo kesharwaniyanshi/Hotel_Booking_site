@@ -57,10 +57,10 @@ export const Footer = () => {
                 <p>All material herein © 2005–2024 Agoda Company Pte. Ltd. All Rights Reserved.</p>
                 <p>Agoda is part of Booking Holdings Inc., the world leader in online travel & related services.</p>
                 <ul>
-                    <li className="icons"><img src="images/airbnb.png"></img></li>
-                    <li className="icons"><img src="images/booking.png"></img></li>
-                    <li className="icons"><img src="images/hotel.com.png"></img></li>
-                    <li className="icons"><img src="images/trivago.png"></img></li>
+                    <li className="icons"><img src="/images/airbnb.png"></img></li>
+                    <li className="icons"><img src="/images/booking.png"></img></li>
+                    <li className="icons"><img src="/images/hotel.com.png"></img></li>
+                    <li className="icons"><img src="/images/trivago.png"></img></li>
                 </ul>
             </div>
             </div>

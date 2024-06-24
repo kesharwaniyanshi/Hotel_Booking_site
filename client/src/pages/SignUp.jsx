@@ -60,7 +60,7 @@ export const SignUp = () => {
                     <div className="section-registration">
                         <div className="container grid grid-two-cols">
                             <div className="registration-image">
-                                <img src="/images/signup_signin.png" alt="A girl looking for hotel" height={500} width={650} ></img>
+                                <img src="/images/sign-up-form.png" alt="A girl looking for hotel" height={500} width={500} ></img>
                             </div>
                             <div className="registration-form ">
                                 <h1 className="main-heading mb-3" >Signup form</h1>
