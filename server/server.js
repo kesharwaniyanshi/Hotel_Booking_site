@@ -17,7 +17,7 @@ const errorMiddleware = require('./middlewares/error-middleware');
 // Tackle cors
 const corsOptions = {
     // origin: 'http://localhost:5173',
-    origin: 'http://localhost:5173',
+    origin: ['http://localhost:5173',"https://hotel-booking-site-frontend.vercel.app"],
     methods: "GET,POST,PUT,PATCH,DELETE",
     credentials: true,
 };
