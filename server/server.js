@@ -7,8 +7,8 @@ const express = require("express");
 const cors = require('cors');
 const authRoute = require("./router/auth-router");
 const contactRoute = require("./router/contact-router");
-const hotelserviceRoute=require("./router/hotelservice-router");
-const adminRoute=require("./router/admin-router");
+const hotelserviceRoute = require("./router/hotelservice-router");
+const adminRoute = require("./router/admin-router");
 const app = express();
 const connectDb = require("./utils/db");
 const errorMiddleware = require('./middlewares/error-middleware');
@@ -16,9 +16,8 @@ const errorMiddleware = require('./middlewares/error-middleware');
 
 // Tackle cors
 const corsOptions = {
-    // origin: 'http://localhost:5173',
-    origin: ['http://localhost:5173',"https://hotel-booking-site-frontend.vercel.app"],
-    methods: "GET,POST,PUT,PATCH,DELETE",
+    origin: ['https://hotel-booking-site-frontend.vercel.app', 'http://localhost:5173'],
+    methods: "GET,POST,PUT,DELETE,PATCH,OPTIONS",
     credentials: true,
 };
 app.use(cors(corsOptions));
@@ -27,10 +26,10 @@ app.use(express.json());
 
 app.use("/api/auth", authRoute);
 app.use("/api/form", contactRoute);
-app.use("/api/data",hotelserviceRoute);
+app.use("/api/data", hotelserviceRoute);
 
 // Admin routes
-app.use("/api/admin",adminRoute);
+app.use("/api/admin", adminRoute);
 
 app.use(errorMiddleware);
 const PORT = 5000;
