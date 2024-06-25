@@ -26,13 +26,13 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/logout" element={<Logout />} />
-        <Route path="*" element={<Error />} />
         <Route path='/admin' element={<AdminLayout />}>
           <Route path='users' element={<AdminUsers />} />
           <Route path='contacts' element={<AdminContacts />} />
           <Route path='hotel' element={<AdminHotel />} />
           <Route path='users/:id/edit' element={<AdminUpdate />} />
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>
