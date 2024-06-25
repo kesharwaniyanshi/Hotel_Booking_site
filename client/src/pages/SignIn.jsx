@@ -19,7 +19,7 @@ export const SignIn = () => {
     };
 
     const navigate = useNavigate();
-    const { storeTokenInLS,API } = useAuth();
+    const { storeTokenInLS, API } = useAuth();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -46,7 +46,7 @@ export const SignIn = () => {
                 navigate("/");
             }
             else {
-                toast.error(data.extraDetails ? data.extraDetails:data.message);
+                toast.error(data.extraDetails ? data.extraDetails : data.message);
                 console.log("invalid credential");
             }
         }
