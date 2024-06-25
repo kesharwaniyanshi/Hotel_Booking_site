@@ -13,6 +13,9 @@ export const AuthProvider = ({ children }) => {
   const [hotels, setHotels] = useState([]);
 const authorizationToken=`Bearer ${token}`;
 
+
+const API=import.meta.env.VITE_APP_URI_API;
+
   //function to stored the token in local storage
   const storeTokenInLS = (serverToken) => {
     setToken(serverToken);
@@ -35,7 +38,7 @@ const authorizationToken=`Bearer ${token}`;
     }
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:5000/api/auth/user", {
+      const response = await fetch(`${API}/api/auth/user`, {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -61,7 +64,7 @@ const authorizationToken=`Bearer ${token}`;
 
   const getHotels = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/data/hotels", {
+      const response = await fetch(`${API}/api/data/hotels`, {
         method: "GET"
       });
       const data = await response.json();
@@ -82,7 +85,7 @@ const authorizationToken=`Bearer ${token}`;
 
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, storeTokenInLS, LogoutUser, user, hotels ,authorizationToken,isLoading}}>
+    <AuthContext.Provider value={{ isLoggedIn, storeTokenInLS, LogoutUser, user, hotels ,authorizationToken,isLoading,API}}>
       {children}
     </AuthContext.Provider>
   );

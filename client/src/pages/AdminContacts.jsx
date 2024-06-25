@@ -5,11 +5,11 @@ import {toast} from "react-toastify";
 export const AdminContacts = () => {
     const [messages, setMessages] = useState([]);
 
-    const { authorizationToken } = useAuth();
+    const { authorizationToken,API } = useAuth();
 
     const getAllUsersMessage = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/admin/contacts", {
+            const response = await fetch(`${API}/api/admin/contacts`, {
                 method: "GET",
                 headers: {
                     Authorization: authorizationToken,  
@@ -29,7 +29,7 @@ export const AdminContacts = () => {
 
     const deleteMsg = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/admin/contacts/delete/${id}`, {
+            const response = await fetch(`${API}/api/admin/contacts/delete/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: authorizationToken,
