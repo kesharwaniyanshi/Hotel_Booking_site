@@ -82,7 +82,6 @@ Before you begin, ensure you have the following installed:
    
 5. Review and Rating System
    - Allow users to leave reviews and ratings for hotels
-   - Display average ratings and recent reviews
 
 10. Responsive Design
     - Mobile-friendly interface
