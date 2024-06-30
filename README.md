@@ -34,11 +34,13 @@ Before you begin, ensure you have the following installed:
 
 3. Set up environment variables:
    - In the `server` folder, create a `.env` file and add:
+     
      ```
      MONGODB_URI=your_mongodb_connection_string
      JWT_SECRET_KEY=your_jwt_secret
      ```
    - In the `client` folder, create a `.env` file and add:
+     
      ```
      VITE_APP_URI_API=http://localhost:5000 # or your backend URL
      ```
